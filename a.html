@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Fan Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Harry Potter Fan Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Character Profiles</a></li>
+                <li><a href="#trailers">Movie Trailers</a></li>
+                <li><a href="#quote">Quote of the Day</a></li>
+                <li><a href="#quiz">Trivia Quiz</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="searchBar" placeholder="Search characters..." onkeyup="searchCharacters()">
+    </header>
+
+    <section id="home">
+        <h2>Welcome to the Harry Potter Fan Hub!</h2>
+        
+        <p>
+
+            Dive into the magical world of Harry Potter! Whether you want to explore character profiles, challenge your wizarding knowledge with a quiz, watch epic trailers, or enjoy a daily magical quote, this is the perfect place for every Potterhead. Start your adventure now! 🪄⚡
+            
+        </p>
+        <div class="movie-posters">
+            <div class="poster">
+                <img src="philosopher stone.jpg" alt="Harry Potter and the Philosopher's Stone">
+                <p>Harry Potter and the Philosopher's Stone</p>
+            </div>
+            <div class="poster">
+                <img src="chamber.jpg" alt="Harry Potter and the Chamber of Secrets">
+                <p>Harry Potter and the Chamber of Secrets</p>
+            </div>
+            <div class="poster">
+                <img src="azkaban.jpg" alt="Harry Potter and the Prisoner of Azkaban">
+                <p>Harry Potter and the Prisoner of Azkaban</p>
+            </div>
+            <div class="poster">
+                <img src="goblet of fire.jpg" alt="Harry Potter and the Goblet of Fire">
+                <p>Harry Potter and the Goblet of Fire</p>
+            </div>
+            <div class="poster">
+                <img src="order of phoenix.jpg" alt="Harry Potter and the Order of the Phoenix">
+                <p>Harry Potter and the Order of the Phoenix</p>
+            </div>
+            <div class="poster">
+                <img src="half way blood.jpg" alt="Harry Potter and the Half-Blood Prince">
+                <p>Harry Potter and the Half-Blood Prince</p>
+            </div>
+            <div class="poster">
+                <img src="deathly hallows 6.jpg" alt="Harry Potter and the Deathly Hallows">
+                <p>Harry Potter and the Deathly Hallows</p>
+            </div>
+            </div>
+
+
+    </section>
+
+    <section id="characters">
+        <h2>Character Profiles</h2>
+        <div class="character gryffindor" data-name="Harry Potter" onclick="showModal('harry')">
+            <img src="Harry.jpg" alt="Harry Potter">
+            <h3>Harry Potter</h3>
+            <p>The Boy Who Lived, famous for his lightning-shaped scar and his role in defeating Voldemort.</p>
+            <ul>
+                <li><strong>Birthday:</strong> July 31</li>
+                <li><strong>Patronus:</strong> Stag</li>
+                <li><strong>Favorite Spell:</strong> Expelliarmus</li>
+            </ul>
+        </div>
+        <div class="character gryffindor" data-name="Hermione Granger" onclick="showModal('hermione')">
+            <img src="harmonie.jpg" alt="Hermione Granger">
+            <h3>Hermione Granger</h3>
+            <p>A brilliant witch with a love for books and learning, and one of Harry's best friends.</p>
+            <ul>
+                <li><strong>Birthday:</strong> September 19</li>
+                <li><strong>Patronus:</strong> Otter</li>
+                <li><strong>Favorite Subject:</strong> Arithmancy</li>
+            </ul>
+        </div>
+        <div class="character gryffindor" data-name="Ron Weasley" onclick="showModal('ron')">
+            <img src="ron weisley.jpg" alt="Ron Weasley">
+            <h3>Ron Weasley</h3>
+            <p>Harry's loyal friend, known for his bravery and sense of humor.</p>
+            <ul>
+                <li><strong>Birthday:</strong> March 1</li>
+                <li><strong>Patronus:</strong> Jack Russell Terrier</li>
+                <li><strong>Favorite Quidditch Team:</strong> Chudley Cannons</li>
+            </ul>
+        </div>
+        <div class="character gryffindor" data-name="Neville Longbottom" onclick="showModal('neville')">
+            <img src="neville.jpg" alt="Neville Longbottom">
+            <h3>Neville Longbottom</h3>
+            <p>A brave and loyal friend, known for his growth from a timid boy to a courageous hero.</p>
+            <ul>
+                <li><strong>Birthday:</strong> July 30</li>
+                <li><strong>Patronus:</strong> Non-corporeal</li>
+                <li><strong>Favorite Subject:</strong> Herbology</li>
+            </ul>
+        </div>
+        <div class="character gryffindor" data-name="Ginny Weasley" onclick="showModal('ginny')">
+            <img src="ginny-weasley.jpg" alt="Ginny Weasley">
+            <h3>Ginny Weasley</h3>
+            <p>A talented witch and Harry's eventual wife, known for her fierce independence and bravery.</p>
+            <ul>
+                <li><strong>Birthday:</strong> August 11</li>
+                <li><strong>Patronus:</strong> Horse</li>
+                <li><strong>Favorite Spell:</strong> Bat-Bogey Hex</li>
+            </ul>
+        </div>
+        <!-- Add more characters as needed -->
+    </section>
+
+    <section id="trailers">
+        <h2>Movie Trailers</h2>
+        <select id="filter" onchange="filterTrailers()">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="adventure">Adventure</option>
+        </select>
+        
+        <div id="trailersContainer">
+            <!-- Trailers will be dynamically inserted here -->
+        </div>
+    </section>
+    
+    <section id="quote">
+        <h2>Quote of the Day</h2>
+        <p id="quoteText">"It does not do to dwell on dreams and forget to live."</p>
+    </section>
+
+    <section id="quiz">
+        <h2>Trivia Quiz</h2>
+        <div id="quizContainer">
+        <div id="resultContainer"></div>
+
+           
+            <!-- Quiz questions will be inserted here by JavaScript -->
+        </div>
+       </section>
+
+    <!-- Modal for character details -->
+    <div id="characterModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal" onclick="closeModal()">×</button>
+            <div id="modalContent">
+                <h2 id="modalTitle">Character Details</h2>
+                <p id="modalDescription">Details about the selected character will be displayed here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
